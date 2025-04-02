@@ -1,0 +1,12 @@
+{
+    "usuario": [
+        {
+            "id": 1,
+            "usuario": "admin",
+            "password": "admin",
+            "nombre": "Jaime Zapata"
+        }
+    ],
+    "clientes": [],
+    "envios": []
+}
