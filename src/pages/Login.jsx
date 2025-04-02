@@ -3,9 +3,11 @@ import './Login.css'
 import { useNavigate } from 'react-router-dom'
 export default function Login(){
 
-    const [getUsername, setUsername]=useState()
-    const [getPassword, setPassword]=useState()
+    const [getUsername, setUsername]=useState("")
+    const [getPassword, setPassword]=useState("")
     let redireccion = useNavigate()
+
+  
 
     function iniciarSesion(username, password){
         if (username === 'admin' && password === '123456'){

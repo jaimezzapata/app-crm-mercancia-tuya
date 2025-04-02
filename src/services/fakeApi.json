@@ -1,0 +1,12 @@
+{
+    "usuario": [
+        {
+            "id": 1,
+            "usuario": "admin",
+            "contraseña": "admin",
+            "nombre": "Kaleb Parra"
+        }
+    ],
+    "clientes": [],
+    "envios": []
+}
