@@ -4,17 +4,7 @@ import './Login.css'
 function Login() {
   const [getName, setName] = useState("")
   const [getPassword, setPasword] = useState("")
-  const [usuarios, setUsuarios] = useState([])
   let redireccion = useNavigate()
-
-  function getUsuarios() {
-    fetch("http://localhost:3001/usuario")
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-      })
-  }
-  getUsuarios()
 
   function iniciarSesion(user, password) {
     if (user === 'admin' && password === '123456') {

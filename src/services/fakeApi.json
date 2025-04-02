@@ -1,12 +1,30 @@
 {
-    "usuario": [
-        {
-            "id": 1,
-            "usuario": "admin",
-            "password": "admin",
-            "nombre": "Jaime Zapata"
-        }
-    ],
-    "clientes": [],
-    "envios": []
+  "usuario": [
+    {
+      "id": "1",
+      "usuario": "admin",
+      "password": "admin",
+      "nombre": "Jaime Zapata"
+    },
+    {
+      "id": "de7e"
+    },
+    {
+      "id": "9a84"
+    },
+    {
+      "id": "cfd7"
+    },
+    {
+      "id": "fc6c"
+    },
+    {
+      "id": "21df"
+    },
+    {
+      "id": "3a75"
+    }
+  ],
+  "clientes": [],
+  "envios": []
 }
