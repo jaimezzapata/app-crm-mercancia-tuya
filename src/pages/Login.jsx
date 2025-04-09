@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { data, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { alertaGenerica, alertaRedireccion } from '../helpers/funciones'
 import './Login.css'
 function Login() {
   const [getName, setName] = useState("")
@@ -8,9 +9,9 @@ function Login() {
 
   function iniciarSesion(user, password) {
     if (user === 'admin' && password === '123456') {
-      redireccion('/home')
+      alertaRedireccion(redireccion, "Bienvenido", "Será redireccionado al home", "success", "/home")
     } else {
-      alert('Error de credenciales')
+      alertaGenerica("Error", "Usuario y/o contraseña incorrecto", "error")
     }
   }
 
