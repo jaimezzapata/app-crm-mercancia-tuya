@@ -4,6 +4,7 @@ import { alertaRedireccion } from "../helpers/funciones"
 const MenuLateral = () => {
   let redireccion = useNavigate()
   function cerrarSesion() {
+    localStorage.removeItem("token")
     alertaRedireccion(redireccion, "La virgen l@s acompañe", "Por la sombrinta y sin hablar con extraños. Loviu y bai", "info", "/")
   }
   return (

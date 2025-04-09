@@ -1,8 +1,7 @@
 import Swal from "sweetalert2";
 
-
 export function generarToken() {
-
+    return "token_" + Math.random().toString(36).substring(2, 10) + "-" + Math.random().toString(36).substring(2, 10)
 }
 
 export function alertaRedireccion(fn, titulo, mensaje, icono, url) {
