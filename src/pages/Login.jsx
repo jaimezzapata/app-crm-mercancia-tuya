@@ -1,20 +1,22 @@
 import { useState } from 'react'
 import './Login.css'
 import { useNavigate } from 'react-router-dom'
+import { alertaGenerica, alertaRedireccion, generarToken } from '../helper/funciones'
 export default function Login(){
 
     const [getUsername, setUsername]=useState("")
     const [getPassword, setPassword]=useState("")
     let redireccion = useNavigate()
 
-  
+    
 
     function iniciarSesion(username, password){
         if (username === 'admin' && password === '123456'){
-            redireccion('/Home')
-            alert('Sesion Iniciada')
+          let tokenAcceso = generarToken()
+          localStorage.setItem("token", tokenAcceso)
+            alertaRedireccion(redireccion, "Bienvenido", "Sera redireccionado al home", "success", "/home")
         }else{
-            alert('Error de Credenciales')
+            alertaGenerica("Error", "Usuario y/o Contraseña incorrecto", "error")
         }
     }
 
