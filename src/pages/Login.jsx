@@ -34,8 +34,8 @@ function Login() {
   function iniciarSesion() {
     if (buscarUsuario()) {
       let tokenAcceso = generarToken();
-      localStorage.setItem("token", tokenAcceso);     
-      localStorage.setItem("usuario", JSON.stringify(buscarUsuario()))
+      localStorage.setItem("token", tokenAcceso);
+      localStorage.setItem("usuario", JSON.stringify(buscarUsuario()));
       alertaRedireccion(
         redireccion,
         "Bienvenido",
