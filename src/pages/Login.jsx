@@ -32,7 +32,7 @@ export default function Login(){
           let tokenAcceso = generarToken()
           localStorage.setItem("token", tokenAcceso)
           localStorage.setItem("usuario", JSON.stringify(findUser()))
-            alertaRedireccion(redireccion, "Bienvenido", "Sera redireccionado al home", "success", "/home")
+            alertaRedireccion(redireccion, "Bienvenido", "Sera redireccionado al home", "success", "/home/")
         }else{
             alertaGenerica("Error", "Usuario y/o Contraseña incorrecto", "error")
         }

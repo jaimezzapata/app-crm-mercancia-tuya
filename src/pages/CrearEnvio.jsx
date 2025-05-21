@@ -27,7 +27,7 @@ let urlEnvios ="https://backjsonserverk.onrender.com/envios"
                 method: "POST",
                 body: JSON.stringify(nuevoEnvio)
             }).then(()=>{
-                alertaRedireccion(redireccion, "Envio Registrado", "Sera redireccionado al login", "success", "/")
+                alertaRedireccion(redireccion, "Envio Registrado", "Sera redireccionado al login", "success", "/home/")
             }).catch(()=>{
                 alertaGenerica("Error", "No se pudo registrar el envio", "error")
             })
@@ -53,7 +53,7 @@ let urlEnvios ="https://backjsonserverk.onrender.com/envios"
                 <option value="Finalizado">Finalizado</option>
             </select>
             <button onClick={RegistrarEnvio} type='button' className="btn">Registrar</button>
-          <Link to="/">Cancelar</Link>
+          <Link to="/home/">Cancelar</Link>
           </div>
         </form>
       </div>
