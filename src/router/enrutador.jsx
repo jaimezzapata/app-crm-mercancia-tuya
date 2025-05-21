@@ -2,6 +2,7 @@
 /* El objeto se construye con el componente y la ruta */
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 import RutaProtegida from "../components/RutaProtegida";
 export let enrutador = [
   {
@@ -11,5 +12,9 @@ export let enrutador = [
   {
     path: '/',
     element: <Login />
+  },
+  {
+    path: '/register',
+    element: <Register/>
   }
 ]

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Login.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { alertaGenerica, alertaRedireccion, generarToken } from '../helper/funciones'
 export default function Login(){
    let urlUsers ="https://backjsonserverk.onrender.com/usuarios"
@@ -20,8 +20,10 @@ export default function Login(){
       getUsuarios()
     },[])
 
+
+
     function findUser(){
-      let user = getUser.find((item)=> getUser == item.user && getPassword == item.password)
+      let user = getUser.find((item)=> getUsername == item.user && getPassword == item.password)
       return user;
     }
 
@@ -29,6 +31,7 @@ export default function Login(){
         if (findUser){
           let tokenAcceso = generarToken()
           localStorage.setItem("token", tokenAcceso)
+          localStorage.setItem("usuario", JSON.stringify(findUser()))
             alertaRedireccion(redireccion, "Bienvenido", "Sera redireccionado al home", "success", "/home")
         }else{
             alertaGenerica("Error", "Usuario y/o Contraseña incorrecto", "error")
@@ -46,26 +49,9 @@ export default function Login(){
             <input onChange={(e) => setUsername(e.target.value)} placeholder="Username" className="input" type="text" />
             <input onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="input" type="text" />
             <button onClick={iniciarSesion} type='button' className="btn">Login</button>
-            <span className="switch">Don't have an account? 
-              <label className="signup_tog" htmlFor="signup_toggle">
-                Sign Up
-              </label>
-            </span>
+            <Link to="/register">¿No tienes cuenta?</Link>
           </div>
-          <div className="form_back">
-            <div className="form_details">SignUp</div>
-            <input placeholder="Firstname" className="input" type="text" />
-            <input placeholder="Username" className="input" type="text" />
-            <input placeholder="Password" className="input" type="text" />
-            <input placeholder="Confirm Password" className="input" type="text" />
-            <button className="btn">Signup</button>
-            <span className="switch">Already have an account? 
-              <label className="signup_tog" htmlFor="signup_toggle">
-                Sign In
-              </label>
-            </span>
-          </div>
-        </form>
+          </form>
       </div>
         </>
     )
