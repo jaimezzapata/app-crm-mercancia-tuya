@@ -31,6 +31,7 @@ function Login() {
     );
     return user;
   }
+  
   function iniciarSesion() {
     if (buscarUsuario()) {
       let tokenAcceso = generarToken();

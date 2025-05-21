@@ -34,7 +34,7 @@ function CrearEnvio() {
                 "Envio registrado",
                 "Será redireccionado al listado",
                 "success",
-                "/"
+                "/home/crear-envio"
             );
         }).catch(() => {
             alertaGenerica("Error", "No se pudo registrar el envio", "error")
