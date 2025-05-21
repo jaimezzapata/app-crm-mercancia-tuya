@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
   alertaGenerica,
   alertaRedireccion,
@@ -66,6 +66,7 @@ function Login() {
       <button onClick={iniciarSesion} type="button">
         Submit
       </button>
+      <Link to="/registro" >¿No tiene una cuenta?</Link>
     </form>
   );
 }
