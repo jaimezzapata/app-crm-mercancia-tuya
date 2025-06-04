@@ -6,27 +6,32 @@ import RutaProtegida from "../components/RutaProtegida";
 import Registro from "../pages/Registro";
 import CrearEnvio from "../pages/CrearEnvio";
 import ListadoEnvios from "../pages/ListadoEnvios";
+import EditarEnvio from "../pages/EditarEnvio";
 export let enrutador = [
   {
-    path: '/home/',
+    path: "/home/",
     element: <RutaProtegida proteger={<Home />} />,
     children: [
       {
         path: "crear-envio",
-        element: <CrearEnvio />
+        element: <CrearEnvio />,
       },
       {
         path: "listar-envios",
-        element: <ListadoEnvios />
-      }
-    ]
+        element: <ListadoEnvios />,
+      },
+      {
+        path: "editar-envio/:id",
+        element: <EditarEnvio />,
+      },
+    ],
   },
   {
-    path: '/',
-    element: <Login />
+    path: "/",
+    element: <Login />,
   },
   {
     path: "/registro",
-    element: <Registro />
-  }
-]
+    element: <Registro />,
+  },
+];
